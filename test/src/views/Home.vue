@@ -1,17 +1,29 @@
 <template>
-   <div>
-     <table>
-            <div class="contaner">
-                <ul class="row" bgcolor="#BDBDBD" font color="white">
-                    <li>전체</li>
-                    <li>복대리</li>
-                    <li>기록등사</li>
-                    <li>조사참여</li>
-                    <li>구치소 접견</li>
-                    <li>강제집행</li>
-                    <li>리서치 의뢰</li>
-                </ul>
-            </div>
+   <div id="nav">
+      <div class="contaner">
+          <ul class="main_list" bgcolor="#BDBDBD" font color="white">
+              <li>전체</li>
+              <li>복대리</li>
+              <li>기록등사</li>
+              <li>조사참여</li>
+              <li>구치소 접견</li>
+              <li>강제집행</li>
+              <li>리서치 의뢰</li>
+          </ul>
+      </div>
+      <div class="cost_contaner">
+          <ul class="cost_list" bgcolor="#BDBDBD" font color="white">
+              <li>누적거래액</li>
+              <li>450.000.000</li>
+              <li>내거래액</li>
+              <li>50.000.000</li>
+              <li>복대리최고가</li>
+              <li>300.000</li>
+              <li>기록등사 최고가</li>
+              <li>500.000</li>
+          </ul>
+      </div>
+        <table>
             <tbody>
                 <tr>
                     <td>복대리</td>
@@ -64,16 +76,20 @@
 
 <script>
   export default {}
-
 </script>
 
 <style>
   ul li{list-style: none;}
-  ul{float:left;width: 100%;}
-  li{float: left;width:20%}
+  ul{float:left;width: 100%;text-align: center;}
+  li{float:left;width:20%;line-height:auto}
+  li:hover{background-color: #093687;color:white}
   table{width: 100%; text-align: center;}
+  tr{border-bottom: 1px solid red;}
   td{width: 30%;font-size:12px;background-color: #ffffff}
   td:hover{background-color: #cccccc;}
   .text{text-align: left;}
   .contaner{width:100%}
+  .cost{float:left;width:100%;text-align: center;}
+  .cost>li{float:left;max-width:25%;line-height:auto}
+  .cost>li:hover{background-color: #093687;color:white}
 </style>
