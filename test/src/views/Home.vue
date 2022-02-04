@@ -1,26 +1,15 @@
 <template>
-   <div id="nav">
-      <div class="contaner">
-          <ul class="main_list" bgcolor="#BDBDBD" font color="white">
-              <li>전체</li>
-              <li>복대리</li>
-              <li>기록등사</li>
-              <li>조사참여</li>
-              <li>구치소 접견</li>
-              <li>강제집행</li>
-              <li>리서치 의뢰</li>
-          </ul>
-      </div>
-      <div class="cost_contaner">
+   <div id="container">
+      <div class="cost">
           <ul class="cost_list" bgcolor="#BDBDBD" font color="white">
               <li>누적거래액</li>
-              <li>450.000.000</li>
+              <li class="point_text">450.000.000</li>
               <li>내거래액</li>
-              <li>50.000.000</li>
+              <li class="point_text">50.000.000</li>
               <li>복대리최고가</li>
-              <li>300.000</li>
+              <li class="point_text">300.000</li>
               <li>기록등사 최고가</li>
-              <li>500.000</li>
+              <li class="point_text">500.000</li>
           </ul>
       </div>
         <table>
@@ -32,7 +21,7 @@
                       일       시 :2021-12-28 13:00<br>
                       진행설정 : 종결<br>
                       희망비용 :120,000원</td>
-                    <td><button>상세보기</button></td>
+                    <td><b-button variant="outline-primary">상세보기</b-button></td>
                 </tr>
                 <tr>
                     <td>조사참여</td>
@@ -41,7 +30,7 @@
                       일       시 :2021-12-28 13:00<br>
                       진행설정 : 종결<br>
                       희망비용 :120,000원</td>
-                    <td><button>상세보기</button></td>
+                    <td><b-button variant="outline-primary">상세보기</b-button></td>
                 </tr>
                 <tr>
                     <td>리서치</td>
@@ -50,7 +39,7 @@
                       일       시 :2021-12-28 13:00<br>
                       진행설정 : 종결<br>
                       희망비용 :120,000원</td>
-                    <td><button>상세보기</button></td>
+                    <td><b-button variant="outline-primary">상세보기</b-button></td>
                 </tr>
                 <tr>
                     <td>기록등사</td>
@@ -58,7 +47,7 @@
                       보  관  처 :: 서울동부지방법원<br>
                       일       시 :2021-12-28 13:00<br>
                       기본비용 : 120,000원<br>
-                    <td><button>상세보기</button></td>
+                    <td><b-button variant="outline-primary">상세보기</b-button></td>
                 </tr>
                 <tr>
                     <td>조사참여</td>
@@ -67,7 +56,16 @@
                       일       시 :2021-12-28 13:00<br>
                       진행설정 : 종결<br>
                       희망비용 :120,000원</td>
-                    <td><button>상세보기</button></td>
+                    <td><b-button variant="outline-primary">상세보기</b-button></td>
+                </tr>
+                 <tr>
+                    <td>기록등사</td>
+                    <td class="text">
+                      법  원 : 서울동부지방법원<br>
+                      일       시 :2021-12-28 13:00<br>
+                      진행설정 : 종결<br>
+                      희망비용 :120,000원</td>
+                    <td><b-button variant="outline-primary">상세보기</b-button></td>
                 </tr>
             </tbody>
         </table>
@@ -79,17 +77,24 @@
 </script>
 
 <style>
+  *{margin:0;padding:0}
   ul li{list-style: none;}
-  ul{float:left;width: 100%;text-align: center;}
-  li{float:left;width:20%;line-height:auto}
+  ul{float:left;width: 100%;margin:0 auto;padding: 0;}
+  li{float:left;width:20%;line-height:auto;text-align:left;}
   li:hover{background-color: #093687;color:white}
-  table{width: 100%; text-align: center;}
-  tr{border-bottom: 1px solid red;}
-  td{width: 30%;font-size:12px;background-color: #ffffff}
-  td:hover{background-color: #cccccc;}
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  td {
+    text-align: center;
+    border-bottom: 1px solid #444444;
+    padding: .7em 0 .7em 0;
+    width:33%;font-size:12px;background-color: #ffffff
+  }
   .text{text-align: left;}
-  .contaner{width:100%}
-  .cost{float:left;width:100%;text-align: center;}
-  .cost>li{float:left;max-width:25%;line-height:auto}
-  .cost>li:hover{background-color: #093687;color:white}
+  .cost{float:left;width:100%; padding: .7em 0 .7em 0;box-sizing: border-box;}
+  .cost_list{width:100%;font-size: 0.9em;;text-align:center}
+  .cost_list>li{float:left;width:25%;line-height:auto}
+  .point_text{color:#f44336;font-weight: bold;}
 </style>
