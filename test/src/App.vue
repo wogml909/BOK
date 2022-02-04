@@ -5,8 +5,7 @@
      <router-view></router-view>
      <Footer />
      </div>
-     
-  </div>
+ </div>
 </template>
 
 <script>
@@ -22,5 +21,12 @@ export default {
 </script>
 
 <style>
+  .footer{
+      position: fixed;
+      bottom:0;width:100%;
+      line-height: auto;
+      background-color: #093687;
+      color:white;
+  }
 
 </style>
