@@ -1,5 +1,6 @@
 <template>
- <div>
+
+ <div div="header_box" class="header_box">
   <b-nav>
     <b-nav-text active>복대리</b-nav-text>
   </b-nav>

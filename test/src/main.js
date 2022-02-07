@@ -5,7 +5,11 @@ import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import {library} from '@fortawesome/fontawesome-svg-core'
 import {faUserSecret} from '@fortawesome/free-solid-svg-icons'
 import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
-
+import Meta from 'vue-meta'
+Vue.use(Meta, {
+  attribute: 'data-vue-meta'
+  // vmid를 사용하기 위한 옵션
+});
 library.add(faUserSecret)
 
 // Import Bootstrap an BootstrapVue CSS files (order is important)
@@ -19,6 +23,8 @@ Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 
 Vue.config.productionTip = false
+Vue.component('font-awesome-icon', FontAwesomeIcon)
+
 
 new Vue({
   router,

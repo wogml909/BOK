@@ -1,86 +1,56 @@
 <template>
   <div id="login_main" class="login_main">
-    <b-form @submit="onSubmit" @reset="onReset" v-if="show">
-      <b-form-group
-        id="input-group-1"
-        label="아이디:"
-        label-for="input-1"
-        description="이메일주소를 입력해주세요"
-      >
-        <b-form-input
-          id="input-1"
-          v-model="form.email"
-          type="email"
-          placeholder="이메일을 입력해주세요"
-          required
-        ></b-form-input>
-      </b-form-group>
-      <b-form-group id="input-group-2" label="비밀번호:" label-for="input-2">
-        <b-form-input
-          id="input-2"
-          v-model="form.name"
-          placeholder="비밀번호를 입력해주세요"
-          required
-        ></b-form-input>
-      </b-form-group>
-      <b-form-group id="input-group-4" v-slot="{ ariaDescribedby }">
-        <b-form-checkbox-group
-          v-model="form.checked"
-          id="checkboxes-4"
-          :aria-describedby="ariaDescribedby"
-        >
-          <b-form-checkbox value="me">아이디찾기</b-form-checkbox>
-          <b-form-checkbox value="that">비밀번호찾기</b-form-checkbox>
-        </b-form-checkbox-group>
-      </b-form-group>
-
-      <b-button type="submit" variant="primary">로그인</b-button>
-      <b-button type="reset" variant="danger">회원가입</b-button>
-    </b-form>
-    <b-card class="mt-3" header="Form Data Result">
-      <pre class="m-0">{{ form }}</pre>
-    </b-card>
+    <h2 class="login_main_title">로그인</h2>
+    <div class="login_main_container">
+      <div class="login_submain_id_box">
+        <p>아이디</p>
+        <p class="login_main_txt_id">이메일을 입력해주세요</p>
+      </div>
+      <div class="login_submain_id_box">
+        <p>비밀번호</p>
+        <p class="login_main_txt_pass">비밀번호를 입력해주세요</p>
+      </div>
+    </div>
+     <button class="login_main_button">로그인</button>
+     <p class="login_main_button_txt">아이디(이메일)찾기 비밀번호찾기</p>
+     <p class="login_main_button_subtxt">아직 계정이 없으신가요?회원가입하기</p>
   </div>
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        form: {
-          email: '',
-          name: '',
-          food: null,
-          checked: []
-        },
-        foods: [{ text: 'Select One', value: null }, 'Carrots', 'Beans', 'Tomatoes', 'Corn'],
-        show: true
-      }
-    },
-    methods: {
-      onSubmit(event) {
-        event.preventDefault()
-        alert(JSON.stringify(this.form))
-      },
-      onReset(event) {
-        event.preventDefault()
-        // Reset our form values
-        this.form.email = ''
-        this.form.name = ''
-        this.form.food = null
-        this.form.checked = []
-        // Trick to reset/clear native browser form validation state
-        this.show = false
-        this.$nextTick(() => {
-          this.show = true
-        })
-      }
-    }
-  }
+  export default {}
 </script>
 <style>
- .login_main{
-   width:100%;
-   text-align: center;
- } 
+.login_main_title{
+    width:100%;
+    font-size: 18px;
+    border-bottom:1px solid #cccccc;
+  }
+  .login_main_container{
+    width:100%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    line-height: auto;
+    background-color:#f4f4f4;
+  }
+  .login_submain_id_box{
+    margin:0 auto;
+    width:90%;
+    background-color: white;
+  };
+  .login_main_txt_id{
+    width:100%;
+    font-size: 10px;
+    line-height: auto;
+    color:#aaaaaa;
+    background-color: red;
+  }
+  .login_main_button{
+    margin-top:10%;
+    width:100%;
+    background-color: #093687;
+    color:white;
+    font-weight: bold;
+  }
 </style>
+

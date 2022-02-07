@@ -1,0 +1,12 @@
+.container{
+    width:100%;
+    .nested-rest1{
+        font-size: $font-size-root;
+        .nested-test2{
+            font-size: $font-size-root;
+        }
+    }
+}
+.row{
+    color: $color-main;
+}

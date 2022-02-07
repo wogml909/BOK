@@ -5,6 +5,7 @@ import About from "./views/About";
 import Mypage from "./views/Mypage";
 import Login from "./views/Login";
 import bokpage from "./views/bokpage";
+import membership from "./views/membership";
 
 Vue.use(VueRouter);
 
@@ -16,6 +17,7 @@ const router =new VueRouter({
         {path:"/Mypage",component:Mypage },
         {path:"/Login",component:Login },
         {path:"/bokpage",component:bokpage },
+        {path:"/membership",component:membership}
     ]
 });
 
