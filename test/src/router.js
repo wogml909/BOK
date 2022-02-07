@@ -4,6 +4,7 @@ import Home from "./views/Home";
 import About from "./views/About";
 import Mypage from "./views/Mypage";
 import Login from "./views/Login";
+import bokpage from "./views/bokpage";
 
 Vue.use(VueRouter);
 
@@ -14,6 +15,7 @@ const router =new VueRouter({
         {path:"/about",component:About },
         {path:"/Mypage",component:Mypage },
         {path:"/Login",component:Login },
+        {path:"/bokpage",component:bokpage },
     ]
 });
 

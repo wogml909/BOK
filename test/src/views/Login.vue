@@ -5,7 +5,7 @@
         id="input-group-1"
         label="아이디:"
         label-for="input-1"
-        description="We'll never share your email with anyone else."
+        description="이메일주소를 입력해주세요"
       >
         <b-form-input
           id="input-1"
@@ -15,7 +15,6 @@
           required
         ></b-form-input>
       </b-form-group>
-
       <b-form-group id="input-group-2" label="비밀번호:" label-for="input-2">
         <b-form-input
           id="input-2"
@@ -24,16 +23,6 @@
           required
         ></b-form-input>
       </b-form-group>
-
-      <!-- <b-form-group id="input-group-3" label="Food:" label-for="input-3">
-        <b-form-select
-          id="input-3"
-          v-model="form.food"
-          :options="foods"
-          required
-        ></b-form-select>
-      </b-form-group> -->
-
       <b-form-group id="input-group-4" v-slot="{ ariaDescribedby }">
         <b-form-checkbox-group
           v-model="form.checked"
