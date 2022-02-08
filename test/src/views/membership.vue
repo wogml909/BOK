@@ -2,7 +2,7 @@
    <div id="member_container">
        <h2 class="member_title">회원가입</h2>
      <div class="member_title_list">
-
+         <input class="name" form="name" contextmenu="아이디" formtarget="id">
      </div>  
   </div>
 </template>
